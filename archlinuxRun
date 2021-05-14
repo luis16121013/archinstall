@@ -1,0 +1,33 @@
+#!/bin/sh
+
+while true; do
+	clear
+	echo "----------------------------------------"
+	echo "| HI! THIS IS MY FIRST ARCH INSTALLER  |"
+	echo "----------------------------------------"
+	echo "|   1) set keyboard la-latin1          |"
+	echo "|   2) unblock wifi [optional]         |"
+	echo "|   3) set wifi connection             |"
+	echo "|   4) ping google [test connection]   |"
+	echo "|   5) guide partition disk            |"
+	echo "|   6) mount partitions                |"
+	echo "----------------------------------------"
+	echo "|         ARCH-CHROOT /MNT             |"
+	echo "----------------------------------------"
+	echo "|   7) hour-keyboard                   |"
+	echo "|   0) EXIT                            |"
+	echo "----------------------------------------"
+	read option
+
+	case $option in
+		"1") ./01.script.sh ;;
+		"2") ./02.script.sh ;;
+		"3") ./03.script.sh ;;
+		"4") ./04.script.sh ;;
+		"5") ./05.script.sh ;;
+		"6") ./06.script.sh ;;
+		"7") ./07.script.sh ;;
+		"0") break ;;
+	esac
+
+done
